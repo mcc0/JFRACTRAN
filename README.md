@@ -29,7 +29,7 @@ Effectuer des multiplications ou des divisons revient alors à additionner ou so
 
 #### Multiplication
 
-Soient `a` et `b` valant respectivement 14 et 10. Nous avons alors :
+Soient `a` et `b` valant respectivement `14` et `10`. Nous avons alors :
 
 * <code>v<sub>2</sub>(a) = 1</code>
 * <code>v<sub>7</sub>(a) = 1</code>
@@ -49,7 +49,7 @@ Si `c` vaut `a * b`, alors :
 Un entier n'est pas toujours divisible par un autre.
 `a` divise `b` si et seulement si, pour tout nombre premier `p`, <code>v<sub>p</sub>(a) < v<sub>p</sub>(b)</code>.
 
-Soient `a` et `b` valant respectivement 20 et 10. Nous avons alors :
+Soient `a` et `b` valant respectivement `20` et `10`. Nous avons alors :
 
 * <code>v<sub>2</sub>(a) = 2</code>
 * <code>v<sub>5</sub>(a) = 1</code>
