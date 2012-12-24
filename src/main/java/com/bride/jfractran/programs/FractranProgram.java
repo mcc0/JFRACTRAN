@@ -46,15 +46,32 @@ public abstract class FractranProgram {
 	 * @return Le résultat du calcul.
 	 */
 	protected ArrayList<Long> compute() {
-		return buildResult(_fractions.compute(_baseValue, _filter, _limit));
+		ArrayList<PrimeDecomposition> decompositions =
+				process(_fractions.compute(_baseValue, _filter, _limit));
+		ArrayList<Long> results = new ArrayList<Long>();
+		
+		for(PrimeDecomposition p : decompositions) {
+			results.addAll(process(p));
+		}
+		
+		return results;
 	}
 	
 	/**
-	 * Construit la liste des entiers du résultat du programme.
-	 * @param decompositions La liste des décompositions issue du calcul sur
-	 * les fractions.
-	 * @return La liste des entiers du résultat du programme.
+	 * Traite la liste des décompositions.
+	 * @param decompositions Les décompositions à traiter.
+	 * @return La liste des décompositins traitées.
 	 */
-	protected abstract ArrayList<Long> buildResult(
-			ArrayList<PrimeDecomposition> decompositions);
+	protected ArrayList<PrimeDecomposition> process(
+			ArrayList<PrimeDecomposition> decompositions) {
+		return decompositions;
+	}
+	
+	/**
+	 * Transforme une décomposition en entier pour contrsuire la liste des
+	 * résultats.
+	 * @param p La décomposition à traiter.
+	 * @return Une liste d'entiers.
+	 */
+	protected abstract ArrayList<Long> process(PrimeDecomposition p);
 }

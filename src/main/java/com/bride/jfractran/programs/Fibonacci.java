@@ -1,5 +1,7 @@
 package com.bride.jfractran.programs;
 
+import java.util.ArrayList;
+
 import com.bride.jfractran.Filter;
 import com.bride.jfractran.Fractions;
 
@@ -25,9 +27,13 @@ public class Fibonacci extends Sequence {
 			}
 		};
 	}
-
+	
 	@Override
-	protected long process(PrimeDecomposition p) {
-		return p.compute();
+	public ArrayList<Long> process(PrimeDecomposition p) {
+		ArrayList<Long> l = new ArrayList<Long>();
+		
+		l.add(p.compute());
+		
+		return l;
 	}
 }

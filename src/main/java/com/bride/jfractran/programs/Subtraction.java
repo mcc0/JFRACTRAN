@@ -24,15 +24,19 @@ public class Subtraction extends ArithOperation {
 	public Subtraction(long a, long b) {
 		super(a, b, Fractions.SUBTRACTION);
 	}
-
+	
 	@Override
-	protected void fillResult(PrimeDecomposition last, ArrayList<Long> result) {
+	public ArrayList<Long> process(PrimeDecomposition p) {
+		ArrayList<Long> l = new ArrayList<Long>();
+		
 		if(_a > _b) {
-			result.add(last.get(2L));
+			l.add(p.get(2L));
 		} else if(_a < _b) {
-			result.add(last.get(3L));
+			l.add(p.get(3L));
 		} else {
-			result.add(0L);
+			l.add(0L);
 		}
+		
+		return l;
 	}
 }

@@ -1,5 +1,7 @@
 package com.bride.jfractran.programs;
 
+import java.util.ArrayList;
+
 import com.bride.jfractran.Filter;
 import com.bride.jfractran.Fractions;
 import com.bride.jfractran.PrimeDecomposition;
@@ -23,9 +25,13 @@ public class ConwayPrimeGame extends Sequence {
 			}
 		};
 	}
-
+	
 	@Override
-	public long process(PrimeDecomposition p) {
-		return p.get(2L);
+	public ArrayList<Long> process(PrimeDecomposition p) {
+		ArrayList<Long> l = new ArrayList<Long>();
+		
+		l.add(p.get(2L));
+		
+		return l;
 	}
 }

@@ -21,9 +21,13 @@ public class Addition extends ArithOperation {
 		
 		_baseValue.put(5L, 1L); //5 est premier avec 6.
 	}
-
+	
 	@Override
-	protected void fillResult(PrimeDecomposition last, ArrayList<Long> result) {
-		result.add(last.get(3L));
+	public ArrayList<Long> process(PrimeDecomposition p) {
+		ArrayList<Long> l = new ArrayList<Long>();
+		
+		l.add(p.get(3L));
+		
+		return l;
 	}
 }

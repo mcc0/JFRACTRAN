@@ -41,22 +41,15 @@ public abstract class ArithOperation extends FractranProgram {
 	}
 	
 	@Override
-	protected ArrayList<Long> buildResult(ArrayList<PrimeDecomposition> decompositions) {
-		ArrayList<Long> result = new ArrayList<Long>();
+	protected ArrayList<PrimeDecomposition> process(
+			ArrayList<PrimeDecomposition> decompositions) {
+		ArrayList<PrimeDecomposition> l = new ArrayList<PrimeDecomposition>();
 		int s = decompositions.size();
-		
+
 		if(s > 0) {
-			fillResult(decompositions.get(s - 1), result);
+			l.add(decompositions.get(s - 1));
 		}
 		
-		return result;
+		return l;
 	}
-	
-	/**
-	 * Remplit le tableau d'entiers pour le résultat du programme.
-	 * @param last La dernière décomposition issue du calcul sur les fractions.
-	 * @param result La liste des résultats à remplir.
-	 */
-	protected abstract void fillResult(PrimeDecomposition last,
-			ArrayList<Long> result);
 }

@@ -24,10 +24,14 @@ public class Division extends ArithOperation {
 		
 		_baseValue.put(11L, 1L);
 	}
-
+	
 	@Override
-	protected void fillResult(PrimeDecomposition last, ArrayList<Long> result) {
-		result.add(last.get(5L));
-		result.add(last.get(7L));
+	public ArrayList<Long> process(PrimeDecomposition p) {
+		ArrayList<Long> l = new ArrayList<Long>();
+
+		l.add(p.get(5L));
+		l.add(p.get(7L));
+		
+		return l;
 	}
 }

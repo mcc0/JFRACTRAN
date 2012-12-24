@@ -19,9 +19,13 @@ public class Multiplication extends ArithOperation {
 	public Multiplication(long a, long b) {
 		super(a, b, Fractions.MULTIPLICATION);
 	}
-
+	
 	@Override
-	protected void fillResult(PrimeDecomposition last, ArrayList<Long> result) {
-		result.add(last.get(5L));
+	public ArrayList<Long> process(PrimeDecomposition p) {
+		ArrayList<Long> l = new ArrayList<Long>();
+		
+		l.add(p.get(5L));
+		
+		return l;
 	}
 }
