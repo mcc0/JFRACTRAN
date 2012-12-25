@@ -108,6 +108,7 @@ Quelques programmes d'exemple tirés de la [page Wikipédia](http://fr.wikipedia
 * le programme de génération des nombres premiers de Conway
 * le programme de génération des termes de la suite de Fibonacci
 * le programme de génération des termes de la suite de Syracuse (compressée)
+* le programme de calcul du poids de Hamming
 
 ### Autres détails techniques ###
 

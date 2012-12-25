@@ -55,6 +55,13 @@ public class Fractions extends ArrayList<Fraction> {
 			7L, 13L, 1L, 7L, 33L, 4L, 5L, 2L, 7L, 1L);
 	
 	/**
+	 * Les fractions pour la génération des termes de la suite de Syracuse
+	 * (version compressée).
+	 */
+	public static final Fractions HAMMING_WEIGHT = Fractions.create(
+			33L, 20L, 5L, 11L, 13L, 10L, 1L, 5L, 2L, 3L, 10L, 7L, 7L, 2L);
+	
+	/**
 	 * Construit une liste de fractions avec les valeurs spécifiées.
 	 * Il n'y a pas de constructeur prenant une liste d'entiers car si un
 	 * entier de la liste est nul ou négatif, sa décomposition lancera une

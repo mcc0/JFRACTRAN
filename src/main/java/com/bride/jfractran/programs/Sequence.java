@@ -13,12 +13,12 @@ public abstract class Sequence extends FractranProgram {
 	
 	/**
 	 * Initialise le programme de génération de suite.
-	 * @param limit Le nombre de termes voulu pour la suite.
-	 * @param baseValue La valeur de base pour le calcul.
 	 * @param fractions Les fractions du programme.
+	 * @param baseValue La valeur de base pour le calcul.
+	 * @param limit Le nombre de termes voulu pour la suite.
 	 */
-	public Sequence(int limit, PrimeDecomposition baseValue,
-			Fractions fractions) {
+	public Sequence(Fractions fractions, PrimeDecomposition baseValue,
+			int limit) {
 		super(fractions, baseValue, limit);
 	}
 }

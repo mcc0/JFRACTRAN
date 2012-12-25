@@ -14,7 +14,8 @@ public class Fibonacci extends Sequence {
 	 * @param limit Le nombre de termes voulu pour la suite.
 	 */
 	public Fibonacci(int limit) {
-		super(limit, PrimeDecomposition.decompose(3L), Fractions.FIBONACCI);
+		super(Fractions.FIBONACCI, PrimeDecomposition.decompose(3L),
+				limit);
 	}
 	
 	@Override

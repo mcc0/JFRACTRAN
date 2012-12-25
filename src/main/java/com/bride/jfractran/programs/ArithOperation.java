@@ -1,16 +1,13 @@
 package com.bride.jfractran.programs;
 
-import java.util.ArrayList;
-
 import com.bride.jfractran.Fractions;
-import com.bride.jfractran.FractranProgram;
 import com.bride.jfractran.PrimeDecomposition;
 
 /**
  * Représente une opération arithmétique binaire élémentaire en FRACTRAN.
  * @author Maxime BRIDE
  */
-public abstract class ArithOperation extends FractranProgram {
+public abstract class ArithOperation extends OnlyLast {
 	protected long _a;
 	protected long _b;
 	
@@ -39,26 +36,5 @@ public abstract class ArithOperation extends FractranProgram {
 		
 		_baseValue.put(2L, _a);
 		_baseValue.put(3L, _b);
-	}
-	
-	@Override
-	protected void processDecompositions() {
-		int s = _decompositions.size();
-
-		/*
-		 * En principe, il devrait toujours y avoir au moins une décomposition,
-		 * mais restons prudents...
-		 */
-		if(s > 0) {
-			/*
-			 * On ne prend que la dernière décomposition qui est la seule à
-			 * contenir les informations du calcul.
-			 */
-			_decompositions = new ArrayList<PrimeDecomposition>(
-					_decompositions.subList(s - 1, s));
-		}
-		
-		//On traite les décompositions.
-		super.processDecompositions();
 	}
 }

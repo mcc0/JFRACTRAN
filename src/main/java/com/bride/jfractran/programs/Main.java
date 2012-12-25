@@ -13,5 +13,6 @@ public class Main {
 		System.out.println(new ConwayPrimeGame(7).compute());
 		System.out.println(new Fibonacci(6).compute());
 		System.out.println(new Syracuse(15L, 10).compute());
+		System.out.println(new HammingWeight(30).compute());
 	}
 }

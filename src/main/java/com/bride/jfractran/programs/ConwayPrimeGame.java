@@ -14,7 +14,8 @@ public class ConwayPrimeGame extends Sequence {
 	 * @param limit Le nombre de termes voulu pour la suite.
 	 */
 	public ConwayPrimeGame(int limit) {
-		super(limit, PrimeDecomposition.decompose(2L), Fractions.CONWAY_PRIME_GAME);
+		super(Fractions.CONWAY_PRIME_GAME, PrimeDecomposition.decompose(2L),
+				limit);
 	}
 	
 	@Override
