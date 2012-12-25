@@ -2,7 +2,6 @@ package com.bride.jfractran;
 
 import java.util.ArrayList;
 
-
 /**
  * Représente un programme FRACTRAN caractérisé par une liste de fractions.
  * @author Maxime BRIDE

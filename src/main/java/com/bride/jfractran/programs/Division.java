@@ -4,7 +4,7 @@ import com.bride.jfractran.Fractions;
 import com.bride.jfractran.PrimeDecomposition;
 
 /**
- * Programme pour la division euclidiennes.
+ * Programme pour la division euclidienne.
  * @author Maxime BRIDE
  * @link http://fr.wikipedia.org/wiki/FRACTRAN#Division_euclidienne
  */
@@ -12,8 +12,7 @@ public class Division extends ArithOperation {
 	/**
 	 * Initialise le programme de division euclidienne.
 	 * Ce programme retourne une liste de deux élements dont le premier est le
-	 * quotient
-	 * et le second est le reste.
+	 * quotient et le second est le reste.
 	 * @param a Le dividende.
 	 * @param b Le diviseur.
 	 */

@@ -1,5 +1,9 @@
 package com.bride.jfractran.programs;
 
+/**
+ * Classe permettant de tester les programmes FRACTRAN.
+ * @author Maxime BRIDE
+ */
 public class Main {
 	public static void main(String args[]) {
 		System.out.println(new Addition(4L, 6L).compute());
