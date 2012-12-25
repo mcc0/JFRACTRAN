@@ -1,7 +1,5 @@
 package com.bride.jfractran.programs;
 
-import java.util.ArrayList;
-
 import com.bride.jfractran.Fractions;
 import com.bride.jfractran.PrimeDecomposition;
 
@@ -26,17 +24,13 @@ public class Subtraction extends ArithOperation {
 	}
 	
 	@Override
-	public ArrayList<Long> process(PrimeDecomposition p) {
-		ArrayList<Long> l = new ArrayList<Long>();
-		
+	public void process(PrimeDecomposition p) {
 		if(_a > _b) {
-			l.add(p.get(2L));
+			_results.add(p.get(2L));
 		} else if(_a < _b) {
-			l.add(p.get(3L));
+			_results.add(p.get(3L));
 		} else {
-			l.add(0L);
+			_results.add(0L);
 		}
-		
-		return l;
 	}
 }

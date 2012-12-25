@@ -3,6 +3,7 @@ package com.bride.jfractran.programs;
 import java.util.ArrayList;
 
 import com.bride.jfractran.Fractions;
+import com.bride.jfractran.FractranProgram;
 import com.bride.jfractran.PrimeDecomposition;
 
 /**
@@ -41,15 +42,23 @@ public abstract class ArithOperation extends FractranProgram {
 	}
 	
 	@Override
-	protected ArrayList<PrimeDecomposition> process(
-			ArrayList<PrimeDecomposition> decompositions) {
-		ArrayList<PrimeDecomposition> l = new ArrayList<PrimeDecomposition>();
-		int s = decompositions.size();
+	protected void processDecompositions() {
+		int s = _decompositions.size();
 
+		/*
+		 * En principe, il devrait toujours y avoir au moins une décomposition,
+		 * mais restons prudents...
+		 */
 		if(s > 0) {
-			l.add(decompositions.get(s - 1));
+			/*
+			 * On ne prend que la dernière décomposition qui est la seule à
+			 * contenir les informations du calcul.
+			 */
+			_decompositions = new ArrayList<PrimeDecomposition>(
+					_decompositions.subList(s - 1, s));
 		}
 		
-		return l;
+		//On traite les décompositions.
+		super.processDecompositions();
 	}
 }

@@ -8,6 +8,8 @@ import java.util.Set;
 
 import org.junit.Test;
 
+import com.bride.jfractran.FractranProgramTest;
+
 import junit.framework.Assert;
 
 /**

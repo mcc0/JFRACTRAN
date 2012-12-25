@@ -1,7 +1,5 @@
 package com.bride.jfractran.programs;
 
-import java.util.ArrayList;
-
 import com.bride.jfractran.Fractions;
 import com.bride.jfractran.PrimeDecomposition;
 
@@ -23,11 +21,7 @@ public class Addition extends ArithOperation {
 	}
 	
 	@Override
-	public ArrayList<Long> process(PrimeDecomposition p) {
-		ArrayList<Long> l = new ArrayList<Long>();
-		
-		l.add(p.get(3L));
-		
-		return l;
+	public void process(PrimeDecomposition p) {
+		_results.add(p.get(3L));
 	}
 }

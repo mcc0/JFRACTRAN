@@ -1,6 +1,7 @@
 package com.bride.jfractran.programs;
 
 import com.bride.jfractran.Fractions;
+import com.bride.jfractran.FractranProgram;
 import com.bride.jfractran.PrimeDecomposition;
 
 /**

@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
+import com.bride.jfractran.FractranProgramTest;
+
 /**
  * Teste le programme d'opération arithmétique.
  * @author Maxime BRIDE

@@ -1,12 +1,12 @@
-# JFRACTRAN
+# JFRACTRAN #
  
-## Théorie
+## Théorie ##
 
 [FRACTRAN](http://fr.wikipedia.org/wiki/FRACTRAN) est un langage de programmation basé sur des fractions d'entiers naturels.
 Il permet de représenter toute fonction opérant sur de tels entiers.
 Un programme FRACTRAN prend donc un entier en entrée et en produit un, plusieurs ou une infinité en sortie.
 
-### Principes
+### Principes ###
 
 Le FRACTRAN s'appuie sur la décomposition en produits de facteurs premiers des entiers et sur la notion de valuation p-adique.
 
@@ -27,7 +27,7 @@ Si `p` n'est pas un facteur premier de la décomposition d'un entier `a`, alors 
 
 Effectuer des multiplications ou des divisons revient alors à additionner ou soustraire des valuations.
 
-#### Multiplication
+#### Multiplication #####
 
 Soient `a` et `b` valant respectivement `14` et `10`. Nous avons alors :
 
@@ -44,7 +44,7 @@ Si `c` vaut `a * b`, alors :
 
 `c` est donc égal à `2 * 2 * 5 * 7 = 140`.
 
-#### Division
+#### Division ####
 
 Un entier n'est pas toujours divisible par un autre.
 `a` divise `b` si et seulement si, pour tout nombre premier `p`, <code>v<sub>p</sub>(a) < v<sub>p</sub>(b)</code>.
@@ -62,7 +62,7 @@ Si `c` vaut `a / b`, alors :
 
 `c` est donc égal à `2`.
 
-### Algorithme
+### Algorithme ###
 
 Soient :
 
@@ -78,9 +78,9 @@ Alors :
 
 L'algorithme retourne la liste de tous les entiers issus des multiplications de fractions.
 
-## Implémentation
+## Implémentation ##
 
-### Généralités
+### Généralités ###
 
 JFRACTRAN est un interpréteur FRACTRAN écrit en Java.
 
@@ -89,15 +89,15 @@ Dans JFRACTRAN, une décomposition est une table de valuations où :
 * chaque clé est un facteur
 * chaque valeur est un exposant
 
-### Programmes FRACTRAN
+### Programmes FRACTRAN ###
 
 Pour écrire un programme FRACTRAN, il faut créer une classe héritant de `FractranProgram` et y spécifier :
 
 * une liste de fractions
 * une valeur de base injectée dans la liste des fractions
-* éventuellement une limite pour le nombre de résultats à calculer (pour éviter les calculs à l'infini)
-* éventuellement un filtre pour filtrer les résultats (notamment pour les programmes générant des termes de suites)
 * une méthode de transformation (`process`) de chaque décomposition retournée par l'algorithme en un ou plusieurs entiers
+* éventuellement une limite pour le nombre de résultats à calculer (pour éviter les calculs à l'infini)
+* éventuellement une méthode de filtrage (`accept`) pour filtrer les résultats (notamment pour les programmes générant des termes de suites)
 
 Quelques programmes d'exemple tirés de la [page Wikipédia](http://fr.wikipedia.org/wiki/FRACTRAN) ont été écrits :
 
@@ -109,7 +109,7 @@ Quelques programmes d'exemple tirés de la [page Wikipédia](http://fr.wikipedia
 * le programme de génération des termes de la suite de Fibonacci
 * le programme de génération des termes de la suite de Syracuse (compressée)
 
-### Autres détails techniques
+### Autres détails techniques ###
 
 Le projet JFRACTRAN a été construit en tant que projet [Maven](http://maven.apache.org/) avec les plugins suivants :
 
